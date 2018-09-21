@@ -12,9 +12,9 @@
 			$data[] = $resultado;
 		}
 			
-			var_dump(json_encode($data,true));
+			echo json_encode($data,true);
 	}else{
-		var_dump (error);
+		echo "error";
 	}
 	$statement->closeCursor();
 	$conexion = null;

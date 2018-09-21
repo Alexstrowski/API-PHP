@@ -1,10 +1,10 @@
 <?php 
 
-	$host = "localhost";
-	$dbname = "test";
-	$user = "root";
-	$pass = "";
-	$conexion = null;
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+
+require('Conexion2.php');
 
 
 	if(isset($_POST["id_usuario"]) && isset($_POST["id_pregunta"]) && isset($_POST["acertada"])) {

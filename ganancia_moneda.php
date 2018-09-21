@@ -1,9 +1,10 @@
 <?php 
-	$host = "localhost";
-	$dbname = "test";
-	$user = "root";
-	$pass = "";
-	$conexion = null;
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+
+require('Conexion2.php');
+
 	
 	if (isset($_GET['monedas']) && isset($_GET['id_usuario'])) {
 
@@ -24,7 +25,7 @@
 
 		}else{
 			
-			$json=NULL;
+			$json="FEIK";
 			mysqli_close($conexion);
 			echo json_encode($json);
 
